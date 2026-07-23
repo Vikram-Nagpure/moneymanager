@@ -13,33 +13,33 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <nav class="hidden md:flex gap-8">
 
 
-        <a href="dashboard.php" class="<?= ($currentPage == 'dashboard.php') 
-            ? 'text-primary font-semibold border-b-2 border-primary pb-1'
-            : 'text-on-surface-variant hover:text-primary px-3 py-2 rounded-md transition-all'; ?>">
+        <a href="dashboard.php" class="<?= ($currentPage == 'dashboard.php')
+                                            ? 'text-primary font-semibold border-b-2 border-primary pb-1'
+                                            : 'text-on-surface-variant hover:text-primary px-3 py-2 rounded-md transition-all'; ?>">
             Dashboard
         </a>
 
-        <a href="incomeexpance.php" class="<?= ($currentPage == 'incomeexpance.php') 
-            ? 'text-primary font-semibold border-b-2 border-primary pb-1'
-            : 'text-on-surface-variant hover:text-primary px-3 py-2 rounded-md transition-all'; ?>">
+        <a href="index.php" class="<?= ($currentPage == 'index.php')
+                                        ? 'text-primary font-semibold border-b-2 border-primary pb-1'
+                                        : 'text-on-surface-variant hover:text-primary px-3 py-2 rounded-md transition-all'; ?>">
             Income & Expense
         </a>
 
-        <a href="transactions.php" class="<?= ($currentPage == 'transactions.php') 
-            ? 'text-primary font-semibold border-b-2 border-primary pb-1'
-            : 'text-on-surface-variant hover:text-primary px-3 py-2 rounded-md transition-all'; ?>">
+        <a href="transactions.php" class="<?= ($currentPage == 'transactions.php')
+                                                ? 'text-primary font-semibold border-b-2 border-primary pb-1'
+                                                : 'text-on-surface-variant hover:text-primary px-3 py-2 rounded-md transition-all'; ?>">
             Transactions
         </a>
 
-        <a href="report.php" class="<?= ($currentPage == 'report.php') 
-            ? 'text-primary font-semibold border-b-2 border-primary pb-1'
-            : 'text-on-surface-variant hover:text-primary px-3 py-2 rounded-md transition-all'; ?>">
+        <a href="report.php" class="<?= ($currentPage == 'report.php')
+                                        ? 'text-primary font-semibold border-b-2 border-primary pb-1'
+                                        : 'text-on-surface-variant hover:text-primary px-3 py-2 rounded-md transition-all'; ?>">
             Report
         </a>
 
-        <a href="setting.php" class="<?= ($currentPage == 'setting.php') 
-            ? 'text-primary font-semibold border-b-2 border-primary pb-1'
-            : 'text-on-surface-variant hover:text-primary px-3 py-2 rounded-md transition-all'; ?>">
+        <a href="setting.php" class="<?= ($currentPage == 'setting.php')
+                                            ? 'text-primary font-semibold border-b-2 border-primary pb-1'
+                                            : 'text-on-surface-variant hover:text-primary px-3 py-2 rounded-md transition-all'; ?>">
             Setting
         </a>
 
@@ -105,7 +105,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                         class="material-symbols-outlined text-[20px]"> settings </span> Settings </a> <a href="#"
                     class="flex items-center gap-3 px-4 py-3 hover:bg-surface-container-low transition"> <span
                         class="material-symbols-outlined text-[20px]"> lock </span> Change Password </a>
-                <div class="border-t border-outline-variant"></div> <a href="login.php"
+                <div class="border-t border-outline-variant"></div> <a href="auth/login.php"
                     class="flex items-center gap-3 px-4 py-3 text-red-600 hover:bg-red-50 transition"> <span
                         class="material-symbols-outlined text-[20px]"> logout </span> Logout </a>
             </div>

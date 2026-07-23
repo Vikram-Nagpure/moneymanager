@@ -260,8 +260,8 @@
                         expenses, budgets, savings, and financial goals securely.</p>
                 </div>
                 <!-- Form -->
-                <form class="flex flex-col gap-stack-md"
-                    onsubmit="event.preventDefault(); document.getElementById('login-btn').innerHTML = '&lt;span class=\'material-symbols-outlined animate-spin\'&gt;progress_activity&lt;/span&gt; Signing In...';">
+                <form class="flex flex-col gap-stack-md" action="authform.php" method="post"
+                    onsubmit="document.getElementById('login-btn').innerHTML='<span class=\'material-symbols-outlined animate-spin\'>progress_activity</span> Signing In...';">
                     <!-- Email/Mobile Input -->
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -269,7 +269,7 @@
                         </div>
                         <input
                             class="w-full h-[56px] pl-12 pr-4 rounded-[24px] bg-surface border border-outline-variant focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200 outline-none font-body-md text-body-md placeholder-on-surface-variant/50"
-                            id="username" placeholder="Email or Mobile Number" required="" type="text" />
+                            id="username" placeholder="Email" name="mm_user_email" required type="text" />
                     </div>
                     <!-- Password Input -->
                     <div class="relative">
@@ -278,7 +278,7 @@
                         </div>
                         <input
                             class="w-full h-[56px] pl-12 pr-12 rounded-[24px] bg-surface border border-outline-variant focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200 outline-none font-body-md text-body-md placeholder-on-surface-variant/50"
-                            id="password" placeholder="Password" required="" type="password" />
+                            id="password" placeholder="Password" name="mm_user_password" required type="password" />
                         <button
                             class="absolute inset-y-0 right-0 pr-4 flex items-center text-outline hover:text-primary transition-colors"
                             onclick="const p=document.getElementById('password'); const i=this.querySelector('.material-symbols-outlined'); if(p.type==='password'){p.type='text';i.textContent='visibility_off';}else{p.type='password';i.textContent='visibility';}"
@@ -299,20 +299,23 @@
                         <a class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors font-semibold"
                             href="#">Forgot Password?</a>
                     </div>
-                    <!-- Primary Action -->
-                    <a href="otpverify.php"
-                        class="w-full h-[56px] rounded-full bg-gradient-to-r from-primary to-[#0f766e] text-white font-label-md text-label-md shadow-[0_4px_14px_0_rgba(20,184,166,0.39)] hover:shadow-[0_6px_20px_rgba(20,184,166,0.23)] hover:-translate-y-[2px] transition-all duration-200 flex items-center justify-center gap-2"
-                        id="login-btn" type="submit">
-                        Sign In
-                    </a>
 
-                    <!-- Footer Link -->
-                    <div class="text-center mt-auto pt-4">
-                        <span class="font-body-md text-body-md text-on-surface-variant">Don't have an account?</span>
-                        <a class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors ml-1"
-                            href="index.php">Create Account</a>
-                    </div>
+                    <!-- Submit Button -->
+                    <button
+                        class="w-full h-[56px] rounded-full bg-gradient-to-r from-[#10b981] to-[#0f766e] text-on-primary font-label-md text-label-md hover:-translate-y-[2px] hover:shadow-[0_4px_20px_rgba(15,118,110,0.4)] active:scale-[0.98] transition-all duration-200 flex justify-center items-center gap-2 fade-in-up stagger-3"
+                        type="submit" name="login" id="login-btn">
+                        Sign In
+                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                    </button>
+
                 </form>
+
+                <!-- Footer Link -->
+                <div class="text-center mt-auto pt-4">
+                    <span class="font-body-md text-body-md text-on-surface-variant">Don't have an account?</span>
+                    <a class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors ml-1"
+                        href="register.php">Create Account</a>
+                </div>
 
 
 

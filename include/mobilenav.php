@@ -8,12 +8,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
         <!-- Dashboard -->
         <a href="dashboard.php"
-            class="flex flex-col items-center justify-center w-1/5 transition-all duration-300 <?= ($currentPage=='dashboard.php') ? 'text-primary' : 'text-gray-500'; ?>">
+            class="flex flex-col items-center justify-center w-1/5 transition-all duration-300 <?= ($currentPage == 'dashboard.php') ? 'text-primary' : 'text-gray-500'; ?>">
 
             <span class="material-symbols-outlined text-[24px]">dashboard</span>
             <span class="text-[11px] font-semibold mt-1">Home</span>
 
-            <?php if($currentPage=="dashboard.php"){ ?>
+            <?php if ($currentPage == "dashboard.php") { ?>
                 <span class="mt-1 h-1 w-8 rounded-full bg-primary"></span>
             <?php } ?>
 
@@ -21,12 +21,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
         <!-- History -->
         <a href="transactions.php"
-            class="flex flex-col items-center justify-center w-1/5 transition-all duration-300 <?= ($currentPage=='transactions.php') ? 'text-primary' : 'text-gray-500'; ?>">
+            class="flex flex-col items-center justify-center w-1/5 transition-all duration-300 <?= ($currentPage == 'transactions.php') ? 'text-primary' : 'text-gray-500'; ?>">
 
             <span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
             <span class="text-[11px] font-semibold mt-1">History</span>
 
-            <?php if($currentPage=="transactions.php"){ ?>
+            <?php if ($currentPage == "transactions.php") { ?>
                 <span class="mt-1 h-1 w-8 rounded-full bg-primary"></span>
             <?php } ?>
 
@@ -35,8 +35,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <!-- Add -->
         <div class="w-1/5 flex justify-center">
 
-            <a href="incomeexpance.php"
-                class="absolute -top-7 w-16 h-16 rounded-full bg-primary text-white shadow-xl shadow-primary/30 flex items-center justify-center border-4 border-white active:scale-95 <?= ($currentPage=='incomeexpance.php') ? 'scale-110' : ''; ?>">
+            <a href="index.php"
+                class="absolute -top-7 w-16 h-16 rounded-full bg-primary text-white shadow-xl shadow-primary/30 flex items-center justify-center border-4 border-white active:scale-95 <?= ($currentPage == 'index.php') ? 'scale-110' : ''; ?>">
 
                 <span class="material-symbols-outlined text-[34px]">add</span>
 
@@ -46,12 +46,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
         <!-- Settings -->
         <a href="report.php"
-            class="flex flex-col items-center justify-center w-1/5 transition-all duration-300 <?= ($currentPage=='report.php') ? 'text-primary' : 'text-gray-500'; ?>">
+            class="flex flex-col items-center justify-center w-1/5 transition-all duration-300 <?= ($currentPage == 'report.php') ? 'text-primary' : 'text-gray-500'; ?>">
 
             <span class="material-symbols-outlined text-[24px]">report</span>
             <span class="text-[11px] font-semibold mt-1">Reports</span>
 
-            <?php if($currentPage=="report.php"){ ?>
+            <?php if ($currentPage == "report.php") { ?>
                 <span class="mt-1 h-1 w-8 rounded-full bg-primary"></span>
             <?php } ?>
 
@@ -59,12 +59,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
         <!-- Settings -->
         <a href="setting.php"
-            class="flex flex-col items-center justify-center w-1/5 transition-all duration-300 <?= ($currentPage=='setting.php') ? 'text-primary' : 'text-gray-500'; ?>">
+            class="flex flex-col items-center justify-center w-1/5 transition-all duration-300 <?= ($currentPage == 'setting.php') ? 'text-primary' : 'text-gray-500'; ?>">
 
             <span class="material-symbols-outlined text-[24px]">settings</span>
             <span class="text-[11px] font-semibold mt-1">Settings</span>
 
-            <?php if($currentPage=="setting.php"){ ?>
+            <?php if ($currentPage == "setting.php") { ?>
                 <span class="mt-1 h-1 w-8 rounded-full bg-primary"></span>
             <?php } ?>
 
@@ -88,7 +88,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 </nav>
 
 <!-- extra menu  -->
- <div id="profileMenu"
+<div id="profileMenu"
     class="fixed inset-0 bg-black/40 z-[60] hidden">
 
     <div class="absolute bottom-24 right-4 w-64 bg-white rounded-2xl shadow-2xl overflow-hidden">
@@ -125,12 +125,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
 <script>
     function toggleProfileMenu() {
-    document.getElementById("profileMenu").classList.toggle("hidden");
-}
-
-document.getElementById("profileMenu").addEventListener("click", function (e) {
-    if (e.target === this) {
-        this.classList.add("hidden");
+        document.getElementById("profileMenu").classList.toggle("hidden");
     }
-});
+
+    document.getElementById("profileMenu").addEventListener("click", function(e) {
+        if (e.target === this) {
+            this.classList.add("hidden");
+        }
+    });
 </script>
